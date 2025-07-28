@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click me if you can</title>
+    <style>
+        button{
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 6px;
+            
+            border: none;
+            box-shadow: 3px 3px 7px grey;
+            position:absolute;
+            left: 100px;
+            top:100px;
+
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Don't Touch</button>
+    <script>
+        const btn=document.getElementById('btn')
+        console.log(btn.value)
+        btn.addEventListener("click",()=>{
+            let x=Math.floor(Math.random()*90);
+            let y=Math.floor(Math.random()*80);
+            btn.style.left=x+5+"%"
+            btn.style.top=y+5+"%"
+        })
+   </script>
+</body>
+</html>
