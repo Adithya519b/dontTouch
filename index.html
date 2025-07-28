@@ -8,7 +8,7 @@
         button{
             background-color: red;
             color: white;
-            padding: 5px;
+            padding: 1.5%;
             border-radius: 6px;
             
             border: none;
@@ -21,15 +21,26 @@
     </style>
 </head>
 <body>
+    <h3 style="text-align: center;">💝<span id="count">0</span></h3>
     <button id="btn">Don't Touch</button>
     <script>
         const btn=document.getElementById('btn')
         console.log(btn.value)
+        let c=0;
         btn.addEventListener("click",()=>{
+            let count=document.getElementById('count');
+            c=c+1;
             let x=Math.floor(Math.random()*90);
             let y=Math.floor(Math.random()*80);
+            
+            if(c<143){
+                count.textContent=c
             btn.style.left=x+5+"%"
             btn.style.top=y+5+"%"
+            }
+            else{
+                count.textContent= c+" i love you 🥰"
+            }
         })
    </script>
 </body>
